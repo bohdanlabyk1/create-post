@@ -1,0 +1,23 @@
+.App{
+  width: 800px;
+  margin: 0 auto;
+ 
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.sel{
+  padding-left: 180px;
+  padding: 40px;
+}
+
+

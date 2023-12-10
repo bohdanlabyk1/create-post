@@ -1,0 +1,30 @@
+.post{
+    border: 1px solid red;
+    width: 800px;
+    margin: 5px auto;
+   display: flex;
+   padding: 15px;
+   justify-content: space-between;
+   align-items: center;
+}
+h1{
+    text-align: center;
+}
+.remove-btn {
+    margin-right: 0.5rem;
+  }
+  
+  .post-enter {
+    opacity: 0;
+  }
+  .post-enter-active {
+    transform: translateX(150px);
+    transition: all 500ms ease-in;
+  }
+  .post-exit {
+    opacity: 1;
+  }
+  .post-exit-active {
+    transform: translateX(-150px);
+    transition: all 500ms ease-in;
+  }
