@@ -8,10 +8,9 @@ import PostServises from './component/api/PostServises';
 import { gePagesArray, getPage } from './util/util';
 
 function App() {
- const [posts, setPosts] = useState([]);
- const [isModalOpen, setModalOpen] = useState(false);
+const [posts, setPosts] = useState([]);
+const [isModalOpen, setModalOpen] = useState(false);
 const [filter, setFilter] = useState({sort:'', query:''})
-
 const [totalPage, setTotalPage] = useState(0)
 const [limit, setLimit] =useState(10);
 const [page, setPage] = useState(1);
@@ -33,7 +32,6 @@ useEffect(() => {
   fetchPosts();
 }, [limit, page]);
 
-  
   const sortedPost = useMemo(() =>{
  if(filter.sort){
   return[...posts].sort((a,b) => a[filter.sort].localeCompare(b[filter.sort]))
@@ -51,6 +49,7 @@ useEffect(() => {
   const closeModal = () => {
     setModalOpen(false);
   };
+  {/* Створення постів */}
  const createPost = (NewPost) => {
   setPosts ([...posts, NewPost])
  }
@@ -62,7 +61,6 @@ useEffect(() => {
  };
   return (
     <div className="App">
-   
    <button style={{marginTop: 30}} onClick={openModal}>Створити пост</button>
    {pagesArray.map(p =>
       <h1>{p}</h1>
@@ -70,7 +68,6 @@ useEffect(() => {
        <Modal isOpen={isModalOpen} onClose={closeModal}>
         <NewPost create={createPost}/>
         </Modal>
-
    <PostFilter filter={filter} setFilter={setFilter}/>
    
      <Postlist remove={remuvPost} posts={SortaddPost}/>
